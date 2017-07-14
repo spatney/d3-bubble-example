@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <style>
+        circle {
+            fill: white;
+            stroke: rgb(9, 109, 189);
+            stroke-width: 5px;
+        }
+
+        text {
+            fill: rgb(9, 109, 189);
+            pointer-events: none;
+        }
+
+        body {
+            font-family: "Segoe UI"
+        }
+    </style>
+</head>
+
+<body>
+    <div id="viz"></div>
+    <script src="//d3js.org/d3.v4.js"></script>
+    <script src="main.js"></script>
+    <script>
+        var data = {
+            "name": "cluster",
+            "children": [
+                { "name": "DATA SCIENTISTS", "size": 39 },
+                { "name": "PROJECT MANAGERS", "size": 22 },
+                { "name": "SENIOR ASSOCIATES", "size": 16 },
+            ]
+        };
+
+        draw(document.getElementById('viz'), 500, data);
+    </script>
+</body>
+
+</html>
