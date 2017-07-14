@@ -11,6 +11,7 @@
         text {
             fill: rgb(9, 109, 189);
             pointer-events: none;
+            font-size: 18px;
         }
 
         body {
@@ -21,7 +22,6 @@
 
 <body>
     <div id="viz"></div>
-    <script src="//d3js.org/d3.v4.js"></script>
     <script src="main.js"></script>
     <script>
         var data = {
@@ -34,7 +34,7 @@
         };
 
         let el = document.getElementById('viz');
-        draw(el, 500, data);
+        draw(el, 600, data);
 
         function eventHandler(e) {
             console.log('Value is: ' + e.detail);
