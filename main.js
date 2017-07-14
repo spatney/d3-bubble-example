@@ -30,11 +30,15 @@ function draw(el, diameter, data) {
 
     node.append("circle")
         .attr("r", function (d) { return d.r; })
-        .on('click', function(){
+        .on('click', function(d){
             console.log('click')
             d3.select(el)
             .selectAll('circle').transition().duration(250).style('fill','rgba(0,0,0,0)');
             d3.select(this).transition().duration(250).style('fill', 'rgba(9, 109, 189, 0.2)')
+
+            var event = new CustomEvent('SuperVizEvent', { 'detail': d.data.value });
+
+            el.dispatchEvent(event);
         })
        /* .style("fill", function (d) {
             return color(d.data.packageName);

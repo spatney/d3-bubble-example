@@ -33,7 +33,13 @@
             ]
         };
 
-        draw(document.getElementById('viz'), 500, data);
+        let el = document.getElementById('viz');
+        draw(el, 500, data);
+
+        function eventHandler(e) {
+            console.log('Value is: ' + e.detail);
+        }
+        el.addEventListener('SuperVizEvent', eventHandler, false);
     </script>
 </body>
 
