@@ -33,7 +33,7 @@ function draw(el, diameter, data) {
         .on('click', function(d){
             console.log('click')
             d3.select(el)
-            .selectAll('circle').transition().duration(250).style('fill','rgba(0,0,0,0)');
+            .selectAll('circle').transition().duration(250).style('fill','white');
             d3.select(this).transition().duration(250).style('fill', 'rgba(9, 109, 189, 0.2)')
 
             var event = new CustomEvent('SuperVizEvent', { 'detail': d.data.value });
